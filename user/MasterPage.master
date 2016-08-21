@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="user_MasterPage" %>
+
+<!DOCTYPE html >
+<html>
+<head runat="server">
+
+    <title>About Me | Sign Up</title>
+    <link href="../script-css/styles.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div id="header2">
+            <div class="logo"><a href="#">
+                <img src="../images/small-logo.png" alt="" width="105" height="20" border="0" /></a></div>
+            <div class="links">
+                <ul>
+                    <li><asp:LinkButton ID="lk" runat="server" OnClick="lk_Click">Posts</asp:LinkButton></li>
+                    <li><a href="frmprf.aspx">Profile</a></li>
+                    <li><a href="frmedtprf.aspx">Edit Profile</a></li>
+                    <li><a href="frmsrcprf.aspx">Search</a></li>
+                    <li><a href="frmfav.aspx">Favourites</a></li>
+                    <li>
+                        <asp:LinkButton ID="lk1" runat="server" OnClick="lk1_Click" CausesValidation="false">Logout</asp:LinkButton></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
